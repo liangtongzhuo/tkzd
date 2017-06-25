@@ -40,7 +40,7 @@ Template.body.helpers({
 });
 
 
-//为数据库
+//为数据库插入
 MyCollection = new Mongo.Collection('myCollection');
 
 var myData = {
@@ -52,3 +52,7 @@ var myData = {
 }
 
 MyCollection.insert(myData);
+
+//数据库查找且限制
+var findCollection = MyCollection.find({key1: "value 1..."}).fetch();
+console.log(findCollection);
