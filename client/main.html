@@ -6,9 +6,12 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+  
   {{# each paragraphs}}
   {{> test}}
   {{/each}}
+
+  {{> myTemplate}}
 </body>
 
 <template name="hello">
@@ -20,3 +23,11 @@
 <template name="test">
   <p>{{text}}</p>
 </template>
+
+
+<template name = "myTemplate">
+   <form>
+      <input type = "text" name = "myForm">
+      <input type = "submit" value = "SUBMIT">
+   </form>
+</template> 
