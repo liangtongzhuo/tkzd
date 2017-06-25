@@ -1,7 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 
 //为数据库插入
-// let MyCollection = new Mongo.Collection('myCollection');
+let MyCollection = new Mongo.Collection('myCollection');
 // var myData = {
 //    key1: "value 1...",
 //    key2: "value 2...",

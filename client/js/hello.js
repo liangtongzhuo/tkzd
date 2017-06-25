@@ -4,7 +4,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 
 //初始化 
-Template.hello.onCreated(function helloOnCreated() {
+Template.hello.onCreated(function () {
   console.log('初始化');
   this.counter = new ReactiveVar(0);
 });

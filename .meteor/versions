@@ -54,10 +54,12 @@ observe-sequence@1.0.16
 ordered-dict@1.0.9
 promise@0.8.9
 random@1.0.10
+reactive-dict@1.1.9
 reactive-var@1.0.11
 reload@1.1.11
 retry@1.0.9
 routepolicy@1.0.12
+session@1.1.7
 shell-server@0.2.3
 spacebars@1.0.15
 spacebars-compiler@1.1.2
