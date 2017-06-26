@@ -16,5 +16,11 @@
   {{> clickTemplate}}
   <h1>--------------------</h1>
   <div id = "reander"></div>
+  <h1>----------注册---------</h1>
+  {{#if currentUser}}
+      {{> home}}
+      {{else}}
+      {{> register}}
+      {{> login}}
+   {{/if}}
 </body>
-

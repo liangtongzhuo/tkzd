@@ -15,4 +15,4 @@ Tracker.autorun(() => {
 Session.set('mySession', 'myData');
 const sessionDataToLog = Session.get('mySession');
 
-console.log(sessionDataToLog);
+// console.log(sessionDataToLog);

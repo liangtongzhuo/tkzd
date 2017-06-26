@@ -5,16 +5,16 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 //初始化 
 Template.hello.onCreated(function () {
-  console.log('初始化');
+  // console.log('初始化');
   this.counter = new ReactiveVar(0);
 });
 //已经渲染
 Template.hello.onRendered(function (){
-  console.log('是DOM结构绘制完毕后就执行，并没有全部家在完图片');
+  // console.log('是DOM结构绘制完毕后就执行，并没有全部家在完图片');
 });
 //销毁
 Template.hello.onDestroyed(function(){
-  console.log('销毁了');
+  // console.log('销毁了');
 });
 
 //可以设置参数与参数的方程

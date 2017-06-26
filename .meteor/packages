@@ -20,3 +20,4 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)  不限制客户端获取任何数据，一般删除
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping) 客户端直接操作，一般删除
 session
+accounts-password
