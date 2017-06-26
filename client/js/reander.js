@@ -1,5 +1,3 @@
-import { Template } from 'meteor/templating';
-import { Blaze } from 'meteor/blaze'
 
 Meteor.startup(()=> {
   //渲染
