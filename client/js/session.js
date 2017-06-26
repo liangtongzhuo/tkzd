@@ -2,7 +2,7 @@
 
 import { Session } from 'meteor/session';
 
-let myData = {
+const myData = {
   key1: "value1",
   key2: "value2"
 }
@@ -13,6 +13,6 @@ Tracker.autorun(() => {
 });
 
 Session.set('mySession', 'myData');
-let sessionDataToLog = Session.get('mySession');
+const sessionDataToLog = Session.get('mySession');
 
 console.log(sessionDataToLog);
