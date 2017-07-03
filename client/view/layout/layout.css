@@ -1,0 +1,29 @@
+nav {
+ 	position: fixed;
+    background: firebrick;
+    height: 44px;
+    width: 100%;
+    bottom: 0;
+}
+
+#layout {
+    margin: 0 auto;
+    position: absolute;
+    background: yellow;
+    height: 100%;
+    width: 100%;
+}
+
+.itemBill {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 30%;
+}
+
+.itemMe {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 25%;
+}
