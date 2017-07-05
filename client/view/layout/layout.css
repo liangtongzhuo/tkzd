@@ -1,6 +1,6 @@
 nav {
  	position: fixed;
-    background: firebrick;
+    background: #000;
     height: 44px;
     width: 100%;
     bottom: 0;
@@ -9,7 +9,6 @@ nav {
 #layout {
     margin: 0 auto;
     position: absolute;
-    background: yellow;
     height: 100%;
     width: 100%;
 }
@@ -18,7 +17,7 @@ nav {
     width: 44px;
     height: 44px;
     position: absolute;
-    left: 30%;
+    left: 25%;
 }
 
 .itemMe {
@@ -26,4 +25,23 @@ nav {
     height: 44px;
     position: absolute;
     right: 25%;
+}
+
+.itemBill>img ,.itemMe>img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.itemBill>a  {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    font-size:5px;
+}
+.itemMe>a{
+    position: absolute;
+    top: 25px;
+    left: 8px;
+    font-size:5px;
 }
