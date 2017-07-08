@@ -4,6 +4,7 @@ nav {
     height: 44px;
     width: 100%;
     bottom: 0;
+    z-index: 1;
 }
 
 #layout {

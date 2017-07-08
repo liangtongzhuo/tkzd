@@ -1,21 +1,48 @@
-.item {
-    position:relative;
-    padding-bottom: 20px;
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    z-index: 1;
 }
 
 h1 {
+    margin-top: 15px;
     margin-left: 20px;
 }
 
-h3 {
-    margin-left: 20px;
+.items {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position:relative;
+    padding-bottom: 20px;
+    height: 70px;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    right: 20px;
 }
 
 span {
     font-size: 15px;
     position: absolute;
     text-align: right;
-    top: 35px;
+    top: 55px;
     left: 20px;
 }
 
@@ -23,6 +50,7 @@ span {
     font-size: 15px;
     position: absolute;
     text-align: right;
-    top: 35px;
+    top: 55px;
     right: 20px;
 }
+
