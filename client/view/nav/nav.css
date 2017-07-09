@@ -1,0 +1,7 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    z-index: 1;
+}
