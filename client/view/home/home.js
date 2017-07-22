@@ -4,7 +4,6 @@ Template.home.onCreated(function(){
     Session.set('a','bbb');
     this.a = new ReactiveVar(5);
     
-
     Tracker.autorun( ()=> { 
         console.log(Session.get('a'));     
         console.log(this.a.get());
