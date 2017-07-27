@@ -1,32 +1,33 @@
 
-Template.home.onCreated(function(){
-    
-    Session.set('a','bbb');
+Template.home.onCreated(function () {
+    this.title = new ReactiveVar('账单');
     this.a = new ReactiveVar(5);
-    
-    Tracker.autorun( ()=> { 
-        console.log(Session.get('a'));     
-        console.log(this.a.get());
+    //这里面包裹，修改里面 Session 或 ReactiveVar。会自动调用下面包裹的方法。
+    Tracker.autorun(() => {
+
+
     });
-    //定时器更新， 会更新上面 autorun
-    Meteor.setTimeout(()=> {
-        Session.set('a','vvvvvv');
-        this.a.set(50);
-    }, 1000);
+
+
 });
 
-Template.home.onRendered(function(){
+Template.home.onRendered(function () {
 
 })
-//设置模版的值
+
+//设置模版的值，可在模版上获取。
 Template.home.helpers({
-    data:function(){
-		return Session.get('a');
-	},
-    a: function(){
+    title(){
+        return Template.instance().title.get();;
+    },
+    data() {
+        return Session.get('a');
+    },
+    a() {
         return Template.instance().a.get();
     }
-   
+
+
 })
 
 
