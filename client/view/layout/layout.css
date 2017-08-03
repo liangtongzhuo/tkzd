@@ -8,10 +8,8 @@
 }
 
 #layout {
-    margin: 0 auto;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: absolute; 
+    width: 100%;  
 }
 
 .itemBill {
