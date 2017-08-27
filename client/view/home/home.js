@@ -1,7 +1,7 @@
 Template.home.onCreated(function () {
     //声明
     this.Data = new ReactiveVar();
-    
+
     //这里面包裹，修改里面 Session 或 ReactiveVar。会自动调用下面包裹的方法。
     // Tracker.autorun(() => {
 
@@ -56,7 +56,7 @@ Template.home.onRendered(function () {
 
 //设置模版的值，可在模版上获取。
 Template.home.helpers({
-    title(){
+    title() {
         return '账单';
     },
     Data() {
@@ -65,9 +65,9 @@ Template.home.helpers({
 })
 
 Template.home.events({
-    'click item': function (e, template) {
+    'click .item': function (e, template) {
         e.preventDefault();
-        console.log(this);
+        console.log('----------', this);
     }
 });
 

@@ -2,13 +2,19 @@
   {{> nav title = title}}
   <div class="items">
     {{#each Data}}
-      <div class="item">
-        <h3 class="title">{{title}}</h3>
-        <h3 class="content">{{content}}</h3>
-        <span>{{pricr}} ¥</span>
-        <span class='time'>2017年6月11日23点</span>
+    <div class="item">
+      <h3 class="title">{{title}}</h3>
+      <h3 class="content">{{content}}</h3>
+      <span>{{pricr}} ¥</span>
+      <span class='time'>2017年6月11日23点</span>
     </div>
     {{/each}}
   </div>
-
+  <!--  浮动的按钮与标签 -->
+  <div class="layoutfixed">
+        <span>
+           新增
+        </span>
+  </div>
+  <!-- /浮动的按钮与标签 -->
 </template>

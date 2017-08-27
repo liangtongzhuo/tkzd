@@ -45,3 +45,23 @@ span {
     right: 20px;
 }
 
+/*按钮 position*/
+.layoutfixed {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 120px;
+    right: 50px;
+    z-index: 1;
+}
+
+.layoutfixed span{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .30);
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+}
