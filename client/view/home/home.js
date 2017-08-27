@@ -72,11 +72,14 @@ Template.home.events({
         e.preventDefault();
         console.log('----------', this);
     },
-    //点击新增按钮
     'click .addBtn': function (e, template) {
         e.preventDefault();
         const bool = Template.instance().fromHidden.get() ? false : true;
         Template.instance().fromHidden.set(bool);
+    },
+    'submit #modal_add from' :function (e, template) {
+        e.preventDefault();
+        console.log('----------', e.target.text.value);
     }
 });
 
