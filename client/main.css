@@ -7,3 +7,11 @@ a:link, a:visited,a:hover {
     text-decoration: none;
     color: #fff;
 }
+
+body, header, h1, h2, h3, div, span, a {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}

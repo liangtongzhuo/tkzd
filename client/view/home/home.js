@@ -1,13 +1,52 @@
-
 Template.home.onCreated(function () {
-
-    this.Data = new ReactiveVar(5);
+    //声明
+    this.Data = new ReactiveVar();
+    
     //这里面包裹，修改里面 Session 或 ReactiveVar。会自动调用下面包裹的方法。
-    Tracker.autorun(() => {
+    // Tracker.autorun(() => {
 
 
-    });
+    // });
 
+    this.Data.set([
+        {
+            title: '饮食',
+            content: '买水果',
+            pricr: '10'
+        }, {
+            title: '饮食',
+            content: '买水果',
+            pricr: '10.5'
+        }, {
+            title: '饮食',
+            content: '矿泉水',
+            pricr: '1',
+        }, {
+            title: '饮食',
+            content: '买水果',
+            pricr: '10'
+        }, {
+            title: '饮食',
+            content: '买水果',
+            pricr: '10.5'
+        }, {
+            title: '饮食',
+            content: '矿泉水',
+            pricr: '1',
+        }, {
+            title: '饮食',
+            content: '买水果',
+            pricr: '10'
+        }, {
+            title: '饮食',
+            content: '买水果',
+            pricr: '10.5'
+        }, {
+            title: '饮食',
+            content: '矿泉水',
+            pricr: '1',
+        },
+    ]);
 
 });
 
@@ -26,7 +65,7 @@ Template.home.helpers({
 })
 
 Template.home.events({
-    'click #xxx item': function (e, template) {
+    'click item': function (e, template) {
         e.preventDefault();
         console.log(this);
     }
