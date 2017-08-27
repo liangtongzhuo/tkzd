@@ -13,7 +13,7 @@ h1 {
 .item {
     position: relative; 
     padding-bottom: 20px;
-    height: 70px;
+    height: 80px;
 }
 
 .title {
@@ -45,17 +45,17 @@ span {
     right: 20px;
 }
 
-/*按钮 position*/
-.layoutfixed {
+/*按钮 */
+.addBtn {
     position: fixed;
     width: 80px;
     height: 80px;
     bottom: 120px;
-    right: 50px;
+    right: 40px;
     z-index: 1;
 }
 
-.layoutfixed span{
+.addBtn span{
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -64,4 +64,23 @@ span {
     line-height: 60px;
     text-align: center;
     font-size: 18px;
+}
+
+/*表单 */
+#modal_add {
+    position: fixed;
+    top: 200px;
+    width: 80%;
+    left: 10%;
+    background-color: #f9f9f9;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .30);
+}
+
+select, input, button{
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }

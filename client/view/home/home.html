@@ -11,10 +11,36 @@
     {{/each}}
   </div>
   <!--  浮动的按钮与标签 -->
-  <div class="layoutfixed">
-        <span>
+  <div class="addBtn">
+    <span>
            新增
         </span>
   </div>
   <!-- /浮动的按钮与标签 -->
+  {{#if fromHidden}}
+    {{> modal_Add}}
+  {{/if}}
+</template>
+
+
+<!-- modal -->
+<template name="modal_Add">
+  <div id='modal_add'>
+    <form>
+      <select id="sele" name="type">
+									<option value="">请选择分类</option>
+							    <option value="1">餐饮</option>
+                  <option value="2">零食</option>
+                  <option value="3">衣服</option>
+                  <option value="4">日用品</option>
+                  <option value="4">住房</option>
+                  <option value="4">学习</option>
+                  <option value="4">医疗</option>
+                  <option value="4">娱乐</option>
+        </select>
+      <input type="text" name="title" placeholder="请输入标题" value="">
+      <input type="text" name="title" placeholder="请输入价格" value="">
+      <button type="button">提交保存</button>
+    </form>
+  </div>
 </template>

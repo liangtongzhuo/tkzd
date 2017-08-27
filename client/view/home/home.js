@@ -1,7 +1,7 @@
 Template.home.onCreated(function () {
     //声明
-    this.Data = new ReactiveVar();
-
+    this.Data = new ReactiveVar([]);
+    this.fromHidden = new ReactiveVar(false);
     //这里面包裹，修改里面 Session 或 ReactiveVar。会自动调用下面包裹的方法。
     // Tracker.autorun(() => {
 
@@ -61,6 +61,9 @@ Template.home.helpers({
     },
     Data() {
         return Template.instance().Data.get();
+    },
+    fromHidden() {
+        return Template.instance().fromHidden.get();
     }
 })
 
@@ -68,6 +71,12 @@ Template.home.events({
     'click .item': function (e, template) {
         e.preventDefault();
         console.log('----------', this);
+    },
+    //点击新增按钮
+    'click .addBtn': function (e, template) {
+        e.preventDefault();
+        const bool = Template.instance().fromHidden.get() ? false : true;
+        Template.instance().fromHidden.set(bool);
     }
 });
 
