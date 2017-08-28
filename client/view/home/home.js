@@ -77,9 +77,13 @@ Template.home.events({
         const bool = Template.instance().fromHidden.get() ? false : true;
         Template.instance().fromHidden.set(bool);
     },
-    'submit #modal_add from' :function (e, template) {
+    'submit #modal_add form' :function (e, template) {
         e.preventDefault();
-        console.log('----------', e.target.text.value);
+        console.log('----------', e.target.title.value);
+    },
+    'click #fromHidden': function (e, template) {
+        e.preventDefault();
+        Template.instance().fromHidden.set(false);
     }
 });
 

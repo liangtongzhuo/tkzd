@@ -27,20 +27,21 @@
 <template name="modal_Add">
   <div id='modal_add'>
     <form id="submit">
-      <select id="sele" name="type">
+      <select id="sele" name="title">
 									<option value="">请选择分类</option>
-							    <option value="1">餐饮</option>
-                  <option value="2">零食</option>
-                  <option value="3">衣服</option>
-                  <option value="4">日用品</option>
-                  <option value="4">住房</option>
-                  <option value="4">学习</option>
-                  <option value="4">医疗</option>
-                  <option value="4">娱乐</option>
+							    <option value="餐饮">餐饮</option>
+                  <option value="零食">零食</option>
+                  <option value="衣服">衣服</option>
+                  <option value="日用品">日用品</option>
+                  <option value="住房">住房</option>
+                  <option value="学习">学习</option>
+                  <option value="医疗">医疗</option>
+                  <option value="娱乐">娱乐</option>
         </select>
-      <input type="text" name="title" placeholder="请输入标题" value="">
-      <input type="text" name="title" placeholder="请输入价格" value="">
-      <button type="" >提交保存</button>
+      <input type="text" name="content" placeholder="请输入备注" value="">
+      <input type="text" name="pricr" placeholder="请输入价格" value="">
+      <button type="submit" >提交保存</button>
     </form>
+     <button id="fromHidden">取消</button>
   </div>
 </template>
