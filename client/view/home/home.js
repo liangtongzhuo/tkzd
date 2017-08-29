@@ -70,12 +70,16 @@ Template.home.helpers({
 Template.home.events({
     'click .item': function (e, template) {
         e.preventDefault();
-        console.log('----------', this);
+        //展示 表单
+        Template.instance().fromHidden.set(true);        
+
     },
     'click .addBtn': function (e, template) {
         e.preventDefault();
+        //展示或隐藏表单
         const bool = Template.instance().fromHidden.get() ? false : true;
         Template.instance().fromHidden.set(bool);
+
     },
     'submit #modal_add form' :function (e, template) {
         e.preventDefault();
