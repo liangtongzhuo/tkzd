@@ -1,5 +1,38 @@
 <template name="me">
-  <h1>我</h1>
+   {{> nav title = title}}
+  <div class="me">
+    {{#if currentUser}}
+      {{> success}}
+    {{else}}
+      {{> register}}
+      {{> login}}
+   {{/if}}
+  </div>
 
   
+</template>
+
+
+
+<template name="register">
+  <h2>注册:</h2>
+  <form>
+    <input type="email" name="registerEmail" placeholder="请输入Email">
+    <input type="password" name="registerPassword" placeholder="请输入密码">
+    <input type="submit" value="注册" >
+  </form>
+</template>
+
+<template name="login">
+  <h2>登录:</h2>
+  <form>
+    <input type="email" name="loginEmail" placeholder="请输入Email">
+    <input type="password" name="loginPassword" placeholder="请输入密码">
+    <input type="submit" value="登录">
+  </form>
+</template>
+
+<template name="success">
+  <p>你已登陆成功</p>
+  <button class="logout">注销</button>
 </template>
