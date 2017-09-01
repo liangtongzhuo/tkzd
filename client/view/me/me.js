@@ -17,9 +17,9 @@ Template.register.events({
 
         Accounts.createUser(registerData, function (error) {
             if (Meteor.user()) {
-                console.log(Meteor.userId());
+                alert('成功：'+Meteor.userId());
             } else {
-                console.log("ERROR: " + error.reason);
+                alert("ERROR: " + error.reason);
             }
         });
     }
@@ -33,9 +33,9 @@ Template.login.events({
 
         Meteor.loginWithPassword(myEmail, myPassword, function (error) {
             if (Meteor.user()) {
-                console.log(Meteor.userId());
+                alert('登陆成功'+Meteor.userId());
             } else {
-                console.log("ERROR: " + error.reason);
+                alert("错误 " + error.reason);
             }
         });
     }
@@ -47,7 +47,7 @@ Template.success.events({
 
         Meteor.logout(function (error) {
             if (error) {
-                console.log("ERROR: " + error.reason);
+                alert("错误 " + error.reason);
             }
         });
     }
@@ -55,6 +55,5 @@ Template.success.events({
 
 
 Template.success.onCreated(function () {
-    // console.log('----------', this.username);
-
+    console.log('----------', Meteor.userId());
 })
