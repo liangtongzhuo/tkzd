@@ -50,7 +50,7 @@ Template.home.events({
         const pricr = e.target.pricr.value;
         
         Meteor.apply('home/post', [{ _id, title, content, pricr}], { wait: true }, (err, res) => {
-
+            console.log('----------','储存');
         });
     },
     'click #fromHidden': function (e, template) {

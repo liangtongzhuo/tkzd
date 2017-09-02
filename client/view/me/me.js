@@ -54,6 +54,4 @@ Template.success.events({
 });
 
 
-Template.success.onCreated(function () {
-    console.log('----------', Meteor.userId());
-})
+//登陆模块文档 https://docs.meteor.com/api/passwords.html

@@ -3,6 +3,7 @@ Meteor.methods({
   //前端传送过来的请求
   'home/get': function (options) {
     // console.log(options);
+    // console.log('----------，如果当前用户登录了，可以拿到是哪个用户发送的请求', Meteor.userId());
     //数据库查询
     return G_bill.find({},{limit:100}).fetch();
   },
