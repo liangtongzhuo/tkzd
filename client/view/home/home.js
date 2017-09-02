@@ -16,7 +16,7 @@ Template.home.onRendered(function () {
 
 //设置模版的值，可在模版上获取。
 Template.home.helpers({
-    title() {
+    name() {
         return '账单';
     },
     Data() {
@@ -30,6 +30,12 @@ Template.home.helpers({
 Template.home.events({
     'click .item': function (e, template) {
         e.preventDefault();
+
+        //删除
+        // Meteor.apply('home/remove', [{_id:this._id}], { wait: true }, (err, res) => {
+
+        // });
+
         //展示表单
         Template.instance().fromHidden.set(true);        
     },
@@ -42,14 +48,20 @@ Template.home.events({
     //提交数据
     'submit #modal_add form' :function (e, template) {
         e.preventDefault();
-        console.log('----------', e.target.title.value);
-        
+        // console.log('----------', e.target.title.value);
         const _id = e.target._id.value;
         const title = e.target.title.value;
         const content = e.target.content.value;
         const pricr = e.target.pricr.value;
         
-        Meteor.apply('home/post', [{ _id, title, content, pricr}], { wait: true }, (err, res) => {
+        let obj
+        if (_id) {
+             obj = { _id, title, content, pricr };
+        } else {
+             obj = { title, content, pricr };
+        }
+
+        Meteor.apply('home/post', [obj], { wait: true }, (err, res) => {
             console.log('----------','储存');
         });
     },

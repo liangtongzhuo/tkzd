@@ -1,12 +1,12 @@
 <template name="home">
-  {{> nav title = title}}
+  {{> nav title = name}}
   <div class="items">
     {{#each Data}}
     <div class="item">
       <h3 class="title">{{title}}</h3>
       <h3 class="content">{{content}}</h3>
       <span>{{pricr}} ¥</span>
-      <span class='time'>{{date}}</span>
+      <span class='time'>{{time}}</span>
     </div>
     {{/each}}
   </div>
@@ -27,7 +27,7 @@
 <template name="modal_Add">
   <div id='modal_add'>
     <form id="submit">
-      <input type="hidden" name="_id" value="{{_id}}">
+      <input type="hidden" name="_id" value="">
       <select id="sele" name="title">
 									<option value="">请选择分类</option>
 							    <option value="餐饮">餐饮</option>
