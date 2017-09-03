@@ -5,7 +5,7 @@ Template.home.onCreated(function () {
     this.fromHidden = new ReactiveVar(false);
     this.update = new ReactiveVar();
 
-    //这里面包裹，修改里面 Session 或 ReactiveVar。会自动调用下面包裹的方法。
+    //这里面包裹，修改里面 Session 或 ReactiveVar，会自动调用下面包裹的方法。
     //注意传的参数，后端可以获取到。
     Tracker.autorun(() => {
         this.update;
@@ -39,7 +39,7 @@ Template.home.events({
         // });
 
         Template.instance().fromHidden.set(true);        
-        // template.fromHidden.set(true);   //上面一句和这句一个意思,都可访问到变量。
+        // template.fromHidden.set(true);   //上面一句和这句等价,都可访问到变量。
     },
     'click .addBtn': function (e, template) {
         e.preventDefault();
@@ -65,9 +65,11 @@ Template.home.events({
         Meteor.apply('home/post', [obj], { wait: true }, (err, res) => {
             Template.instance().fromHidden.set(false);
             if(err) alert(err);
-        });
 
-        Template.instance().fromHidden.set(false);        
+            // 刷新界面
+            Template.instance().update.set(new Data);
+            Template.instance().fromHidden.set(false);
+        });
     },
     'click #fromHidden': function (e, template) {
         e.preventDefault();
