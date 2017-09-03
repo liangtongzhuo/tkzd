@@ -8,7 +8,8 @@ Template.home.onCreated(function () {
     //这里面包裹，修改里面 Session 或 ReactiveVar，会自动调用下面包裹的方法。
     //注意传的参数，后端可以获取到。
     Tracker.autorun(() => {
-        this.update;
+        this.update.get();
+
         Meteor.apply('home/get', [{a:'1'}], { wait: true }, (err, res)=> {
             if (!err) this.Data.set(res);
         });
@@ -38,14 +39,14 @@ Template.home.events({
         // Meteor.apply('home/remove', [{_id:this._id}], { wait: true }, (err, res) => {
         // });
 
-        Template.instance().fromHidden.set(true);        
-        // template.fromHidden.set(true);   //上面一句和这句等价,都可访问到变量。
+        // Template.instance().fromHidden.set(true);        
+        template.fromHidden.set(true);   //上面一句和这句等价,都可访问到变量，建议用这行的。
     },
     'click .addBtn': function (e, template) {
         e.preventDefault();
         //展示或隐藏表单
-        const bool = Template.instance().fromHidden.get() ? false : true;
-        Template.instance().fromHidden.set(bool);
+        const bool = template.fromHidden.get() ? false : true;
+        template.fromHidden.set(bool);
     },
     //提交数据
     'submit #modal_add form' :function (e, template) {
@@ -63,17 +64,16 @@ Template.home.events({
              obj = { title, content, pricr };
         }
         Meteor.apply('home/post', [obj], { wait: true }, (err, res) => {
-            Template.instance().fromHidden.set(false);
             if(err) alert(err);
 
             // 刷新界面
-            Template.instance().update.set(new Data);
-            Template.instance().fromHidden.set(false);
+            template.update.set(new Date);
+            template.fromHidden.set(false);
         });
     },
     'click #fromHidden': function (e, template) {
         e.preventDefault();
-        Template.instance().fromHidden.set(false);
+        template.fromHidden.set(false);
     }
 });
 
