@@ -3,8 +3,12 @@ Template.home.onCreated(function () {
     //声明
     this.Data = new ReactiveVar([]);
     this.fromHidden = new ReactiveVar(false);
+    this.update = new ReactiveVar();
+
     //这里面包裹，修改里面 Session 或 ReactiveVar。会自动调用下面包裹的方法。
+    //注意传的参数，后端可以获取到。
     Tracker.autorun(() => {
+        this.update;
         Meteor.apply('home/get', [{a:'1'}], { wait: true }, (err, res)=> {
             if (!err) this.Data.set(res);
         });
@@ -30,14 +34,12 @@ Template.home.helpers({
 Template.home.events({
     'click .item': function (e, template) {
         e.preventDefault();
-
         //删除
         // Meteor.apply('home/remove', [{_id:this._id}], { wait: true }, (err, res) => {
-
         // });
 
-        //展示表单
         Template.instance().fromHidden.set(true);        
+        // template.fromHidden.set(true);   //上面一句和这句一个意思,都可访问到变量。
     },
     'click .addBtn': function (e, template) {
         e.preventDefault();
@@ -60,10 +62,12 @@ Template.home.events({
         } else {
              obj = { title, content, pricr };
         }
-
         Meteor.apply('home/post', [obj], { wait: true }, (err, res) => {
-            console.log('----------','储存');
+            Template.instance().fromHidden.set(false);
+            if(err) alert(err);
         });
+
+        Template.instance().fromHidden.set(false);        
     },
     'click #fromHidden': function (e, template) {
         e.preventDefault();
