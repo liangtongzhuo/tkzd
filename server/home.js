@@ -1,6 +1,6 @@
 //发布数据
 Meteor.publish('getBill', function (options) {
-  console.log('----------',options);
+  // console.log('----------',options);
   return G_bill.find({}, { limit: 100 });
 });
 
