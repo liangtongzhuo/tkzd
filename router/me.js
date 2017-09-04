@@ -1,3 +1,5 @@
-Router.route('/me', function () {
-  this.render('me');
+Router.route('/me', {
+  action() {
+    this.render('me');
+  }
 });

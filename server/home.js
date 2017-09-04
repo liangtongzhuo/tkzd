@@ -1,4 +1,12 @@
+//发布数据
+Meteor.publish('getBill', function (options) {
+  console.log('----------',options);
+  return G_bill.find({}, { limit: 100 });
+});
 
+
+
+//定义方法
 Meteor.methods({
   //前端传送过来的请求
   'home/get': function (options) {

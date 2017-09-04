@@ -1,19 +1,20 @@
 //创建调用
 Template.home.onCreated(function () {
     //声明
-    this.Data = new ReactiveVar([]);
+    // this.Data = new ReactiveVar([]);
+    // this.update = new ReactiveVar();
     this.fromHidden = new ReactiveVar(false);
-    this.update = new ReactiveVar();
+    
 
+    //  API 形式的与后端交互。 
     //这里面包裹，修改里面 Session 或 ReactiveVar，会自动调用下面包裹的方法。
     //注意传的参数，后端可以获取到。
-    Tracker.autorun(() => {
-        this.update.get();
-
-        Meteor.apply('home/get', [{a:'1'}], { wait: true }, (err, res)=> {
-            if (!err) this.Data.set(res);
-        });
-    });
+    // Tracker.autorun(() => {
+        // this.update.get();
+        // Meteor.apply('home/get', [{a:'1'}], { wait: true }, (err, res)=> {
+        //     if (!err) this.Data.set(res);
+        // });
+    // });
 });
 //渲染调用
 Template.home.onRendered(function () {
@@ -24,8 +25,14 @@ Template.home.helpers({
     name() {
         return '账单';
     },
+    //1.后端设计接口，2.声明 ReactiveVar 3.第9行调用接口，4 这里传送到前端。
+    // Data() {
+    //     return Template.instance().Data.get();
+    // },
     Data() {
-        return Template.instance().Data.get();
+        //注册和发布与后端交互数据
+        //1.后端发布数据，2.路由注册接收数据，3.这里才能查询出来数据。 这种方法，实时性好，更改数据库，前端会自动更新界面。
+        return G_bill.find({}, { limit: 100, sort: { time: -1 }}).fetch();
     },
     fromHidden() {
         return Template.instance().fromHidden.get();
@@ -67,7 +74,7 @@ Template.home.events({
             if(err) alert(err);
 
             // 刷新界面
-            template.update.set(new Date);
+            // template.update.set(new Date);
             template.fromHidden.set(false);
         });
     },
