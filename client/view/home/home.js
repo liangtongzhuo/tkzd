@@ -6,7 +6,6 @@ Template.home.onCreated(function () {
     this.fromHidden = new ReactiveVar(false);
     this.object = new ReactiveVar();
 
-    
     //  API 形式的与后端交互。 
     //这里面包裹，修改里面 Session 或 ReactiveVar，会自动调用下面包裹的方法。
     //注意传的参数，后端可以获取到。
@@ -16,6 +15,11 @@ Template.home.onCreated(function () {
         //     if (!err) this.Data.set(res);
         // });
     // });
+
+    // 任何地方都可以用 Session 访问到是一个健值，但是 F5 刷新页面会丢失所有 Session。
+    //Session.set('G_aaaaa', false);
+    //const a = Session.get('G_aaaaa');
+
 });
 //渲染调用
 Template.home.onRendered(function () {
@@ -100,6 +104,5 @@ Template.home.events({
 Template.modal_Add.onCreated(function () {
     console.log('----------',this.object);
 })
-
 
 
