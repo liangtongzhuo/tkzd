@@ -18,7 +18,7 @@
   </div>
   <!-- /浮动的按钮与标签 -->
   {{#if fromHidden}}
-    {{> modal_Add}}
+    {{> modal_Add object=object }}
   {{/if}}
 </template>
 
@@ -27,9 +27,13 @@
 <template name="modal_Add">
   <div id='modal_add'>
     <form id="submit">
-      <input type="hidden" name="_id" value="">
+      <input type="hidden" name="_id" value="{{object._id}}">
       <select id="sele" name="title">
-									<option value="">请选择分类</option>
+                    {{#if object.title}}
+                    <option value="{{object.title}}">{{object.title}}</option>
+                    {{else}}
+                    <option value="">请选择分类</option>
+                    {{/if}}
 							    <option value="餐饮">餐饮</option>
                   <option value="零食">零食</option>
                   <option value="衣服">衣服</option>
@@ -39,8 +43,8 @@
                   <option value="医疗">医疗</option>
                   <option value="娱乐">娱乐</option>
         </select>
-      <input type="text" name="content" placeholder="请输入备注" value="">
-      <input type="text" name="pricr" placeholder="请输入价格" value="">
+      <input type="text" name="content" placeholder="请输入备注" value="{{object.content}}">
+      <input type="text" name="pricr" placeholder="请输入价格" value="{{object.pricr}}">
       <button type="submit" >提交保存</button>
     </form>
      <button id="fromHidden">取消</button>

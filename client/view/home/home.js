@@ -4,8 +4,9 @@ Template.home.onCreated(function () {
     // this.Data = new ReactiveVar([]);
     // this.update = new ReactiveVar();
     this.fromHidden = new ReactiveVar(false);
-    
+    this.object = new ReactiveVar();
 
+    
     //  API 形式的与后端交互。 
     //这里面包裹，修改里面 Session 或 ReactiveVar，会自动调用下面包裹的方法。
     //注意传的参数，后端可以获取到。
@@ -36,6 +37,9 @@ Template.home.helpers({
     },
     fromHidden() {
         return Template.instance().fromHidden.get();
+    },
+    object(){
+        return Template.instance().object.get();
     }
 })
 //设置模版点击事件
@@ -46,11 +50,18 @@ Template.home.events({
         // Meteor.apply('home/remove', [{_id:this._id}], { wait: true }, (err, res) => {
         // });
 
+        //传值
+        template.object.set(this);
+
         // Template.instance().fromHidden.set(true);        
         template.fromHidden.set(true);   //上面一句和这句等价,都可访问到变量，建议用这行的。
+        
     },
     'click .addBtn': function (e, template) {
         e.preventDefault();
+        
+        //清空值
+        template.object.set({});
         //展示或隐藏表单
         const bool = template.fromHidden.get() ? false : true;
         template.fromHidden.set(bool);
@@ -70,6 +81,7 @@ Template.home.events({
         } else {
              obj = { title, content, pricr };
         }
+
         Meteor.apply('home/post', [obj], { wait: true }, (err, res) => {
             if(err) alert(err);
 
@@ -85,8 +97,9 @@ Template.home.events({
 });
 
 
-
-
+Template.modal_Add.onCreated(function () {
+    console.log('----------',this.object);
+})
 
 
 
