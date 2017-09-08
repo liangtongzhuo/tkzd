@@ -7,6 +7,8 @@
 
 ## 主要内容
 
+### 模块
+
 - template
  - 生命周期
  - 嵌套
@@ -21,13 +23,13 @@
 - 前后端交互
  - API 调用
 
+### 安装与运行
+
 OSX / LINUX 安装
 
 ```
 curl https://install.meteor.com/ | sh
 ```
-
-
 运行，途中如果你缺少插件，终端会提示语句，按照做就好
 
 ```
@@ -48,10 +50,12 @@ meteor run
 - server 服务器 API
 
 
-
+### 链接
 GitHub 地址：https://github.com/liangtongzhuo/tkzd
 
-给点鼓励啦 😊
+### 结束语
+本身公司用 Meteor 所以写了这个项目来加速熟悉公司系统，不知可否给点鼓励 😊
+
 
 
 
