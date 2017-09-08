@@ -19,6 +19,7 @@ Template.home.onCreated(function () {
     // 任何地方都可以用 Session 访问到是一个健值，但是 F5 刷新页面会丢失所有 Session。
     //Session.set('G_aaaaa', false);
     //const a = Session.get('G_aaaaa');
+    // ostrio: cookies  这个插件F5 刷新不会丢失。需要安装
 
 });
 //渲染调用
