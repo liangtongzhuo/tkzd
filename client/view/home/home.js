@@ -68,7 +68,7 @@ Template.home.events({
         //清空值
         template.object.set({});
         //展示或隐藏表单
-        const bool = template.fromHidden.get() ? false : true;
+        const bool = !template.fromHidden.get();
         template.fromHidden.set(bool);
     },
     //提交数据
