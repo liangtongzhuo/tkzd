@@ -22,3 +22,4 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 session                        # session 全局传参数
 accounts-password              # 账号系统
 iron:router                    # 路由系统
+check

@@ -1,6 +1,5 @@
 //发布数据
 Meteor.publish('getBill', function (options) {
-  // console.log('----------',options);
   return G_bill.find({}, { limit: 100 });
 });
 
@@ -11,13 +10,20 @@ Meteor.methods({
   //前端传送过来的请求
   'home/get': function (options) {
     // console.log(options);
-    // console.log('----------，如果当前用户登录了，可以拿到是那个用户的id', Meteor.userId());
     //数据库查询
     return G_bill.find({},{limit:100}).fetch();
   },
   'home/post': function (obj) {
-    // console.log(obj);
-    //一般会在这里验证数据，然后再往数据库里面存。
+    // console.log('----------，如果当前用户登录了，可以拿到是那个用户的id', Meteor.userId());
+    // if (!this.userId) throw new Meteor.Error('error', '没有权限操作！');
+
+    //在这里验证数据，然后再往数据库里面存。check插件需要安装
+    check(obj, {
+      title: String,
+      content: String,
+      pricr: Number
+    });
+
     if (obj._id) {
       G_bill.update(obj._id, { $set: obj });
     } else {

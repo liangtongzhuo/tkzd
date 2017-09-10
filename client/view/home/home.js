@@ -78,7 +78,7 @@ Template.home.events({
         const _id = e.target._id.value;
         const title = e.target.title.value;
         const content = e.target.content.value;
-        const pricr = e.target.pricr.value;
+        const pricr = Number(e.target.pricr.value);
         
         let obj
         if (_id) {
