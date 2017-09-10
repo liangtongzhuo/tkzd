@@ -1,4 +1,4 @@
-项目使用 Meteor 1.5 ，写的一个记账的小 Demo，目的是为了让新手入门 Meteor 的一个小项目，业务部发展，包含一些基本使用功能。
+项目使用 Meteor 1.5 ，写的一个记账的小 Demo，目的是为了让新手入门 Meteor 的一个小项目，包含一些基本使用功能。
 
 
 <img src="cover.png" style="width:200px">
