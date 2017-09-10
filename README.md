@@ -41,10 +41,10 @@ meteor run
 ### 文件目录
 - .meteor 里面是 Meteor 框架的东西
 - client 前端
- - View
-     - js
-     - CSS
-     - HTML 	
+   - View
+       - js
+       - CSS
+       - HTML 	
 - model 模型
 - node_modules
 - public 放图片
