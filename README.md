@@ -48,7 +48,8 @@ meteor run
 - public 放图片
 - router 路由
 - server 服务器 API
-
+  - 数据验证
+  - 数据权限
 
 ### 链接
 GitHub 地址：https://github.com/liangtongzhuo/tkzd
