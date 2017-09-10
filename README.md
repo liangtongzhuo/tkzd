@@ -22,6 +22,8 @@
 - 数据库增删改查
 - 前后端交互
   - API 调用
+  - 数据验证
+  - 数据权限
 
 ### 安装与运行
 
@@ -48,8 +50,7 @@ meteor run
 - public 放图片
 - router 路由
 - server 服务器 API
-  - 数据验证
-  - 数据权限
+
 
 ### 链接
 GitHub 地址：https://github.com/liangtongzhuo/tkzd
