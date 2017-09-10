@@ -56,7 +56,7 @@ meteor run
 GitHub 地址：https://github.com/liangtongzhuo/tkzd
 
 ### 结束语
-本身公司用 Meteor 所以写了这个项目来加速熟悉公司系统，如有疑问可以 issues 
+本身公司用 Meteor 所以写了这个项目来加速熟悉公司项目，如有疑问可以 issues 
 
 
 
