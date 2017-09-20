@@ -51,6 +51,8 @@ meteor run
 - router 路由
 - server 服务器 API
 
+### 细节问题
+文件 .meteor 里的 local 会生成缓存文件，占硬盘，可以删除。
 
 ### 链接
 GitHub 地址：https://github.com/liangtongzhuo/tkzd
