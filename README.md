@@ -1,45 +1,46 @@
 项目使用 Meteor 1.5 ，写的一个记账的小 Demo，目的是为了让新手入门 Meteor 的一个小项目，包含一些基本使用功能。
+
 The project uses meteor 1.5 to write a small demo for accounting. The purpose is to let novices get started with a small project of meteor, including some basic functions.
 
 <img src="cover.png" style="width:200px">
 
-##Main contents
+## Main contents
 
-###Module
+### Module
 
 - template
 
--Life cycle
+  - Life cycle
 
--Nesting
+  - Nesting
 
--Rendering
+  - Rendering
 
--Events
+  - Events
 
--Routing
+  - Routing
 
--Account system
+  - Account system
 
--Landing
+  - Landing
 
--Log out
+  - Log out
 
--Registration
+  - Registration
 
--Database addition, deletion, modification and query
+  - Database addition, deletion, modification and query
 
--Front end interaction
+  - Front end interaction
 
--API call
+  - API call
 
--Data validation
+  - Data validation
 
--Data permission
+  - Data permission
 
 
 
-###Installation and operation
+### Installation and operation
 
 
 
@@ -79,31 +80,31 @@ meteor run
 
 - HTML
 
--Model model
+- Model model
 
 - node_ modules
 
--Public pictures
+- Public pictures
 
--Router routing
+- Router routing
 
--Server server API
+- Server server API
 
 
 
-###Details
+### Details
 
 Local in the file. Meter will generate a cache file, which occupies the hard disk and can be deleted.
 
 
 
-###Links
+### Links
 
 GitHub address: https://github.com/liangtongzhuo/tkzd
 
 
 
-###Conclusion
+### Conclusion
 
 The company uses meteor to write this project to speed up the familiarity with the company's project. If you have any questions, you can issue
 
