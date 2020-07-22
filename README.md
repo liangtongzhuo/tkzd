@@ -10,48 +10,43 @@ The project uses meteor 1.5 to write a small demo for accounting. The purpose is
 
 - template
 
-  - Life cycle
+- Life cycle
 
-  - Nesting
+- Nesting
 
-  - Rendering
+- Rendering
 
-  - Events
+- Events
 
-  - Routing
+- Routing
 
-  - Account system
+- Account system
 
-  - Landing
+- Landing
 
-  - Log out
+- Log out
 
-  - Registration
+- Registration
 
-  - Database addition, deletion, modification and query
+- Database addition, deletion, modification and query
 
-  - Front end interaction
+- Front end interaction
 
-  - API call
+- API call
 
-  - Data validation
+- Data validation
 
-  - Data permission
-
+- Data permission
 
 
 ### Installation and operation
 
 
-
 OSX / Linux Installation
 
 
-
 ` ` ` `
-
 curl https://install.meteor.com/ | sh
-
 ` ` ` `
 
 Run, on the way, if you lack plug-ins, the terminal will prompt statements, according to do well
@@ -59,14 +54,12 @@ Run, on the way, if you lack plug-ins, the terminal will prompt statements, acco
 
 
 ` ` ` `
-
 meteor run
-
 ` ` ` `
 
 
 
-###File directory
+### File directory
 
 -. meteor contains the meteor framework
 
