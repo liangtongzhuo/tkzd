@@ -1,4 +1,4 @@
-项目使用 Meteor 1.5 ，写的一个记账的小 Demo，目的是为了让新手入门 Meteor 的一个小项目，包含一些基本使用功能。
+项目使用 Meteor 1.5 ，写的一个记账的小 Demo，目的是为了让新手入门 Meteor 的一个小项目，包含一些基本使用功能, 中文文档在👇
 
 The project uses meteor 1.5 to write a small demo for accounting. The purpose is to let novices get started with a small project of meteor, including some basic functions.
 
@@ -45,17 +45,17 @@ The project uses meteor 1.5 to write a small demo for accounting. The purpose is
 OSX / Linux Installation
 
 
-` ` ` `
+```
 curl https://install.meteor.com/ | sh
-` ` ` `
+```
 
 Run, on the way, if you lack plug-ins, the terminal will prompt statements, according to do well
 
 
 
-` ` ` `
+```
 meteor run
-` ` ` `
+```
 
 
 
